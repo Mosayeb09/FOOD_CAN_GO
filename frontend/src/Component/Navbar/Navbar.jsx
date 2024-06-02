@@ -7,7 +7,7 @@ const Navbar = ({setshowForm}) => {
     const [menu,setMenu] = useState(' ')
     return (
         <div className='navbar'>
-            <img src={assets.logo} alt="" className="logo" />
+           <Link to={'/'}> <img src={assets.logo} alt="" className="logo" /></Link>
             <ul className="navbar-menu">
                 <Link to={'/'} onClick={()=>setMenu('Home')} className={menu==='Home'?'active':''}>Home</Link>
                 <a href='#explore-menu' onClick={()=>setMenu('Menu')} className={menu==="Menu"?'active':''} >Menu</a>
@@ -18,7 +18,7 @@ const Navbar = ({setshowForm}) => {
             <div className="navbar-right">
                 <img src={assets.search_icon} alt="" />
                 <div className="navbar-search-icon">
-                    <img src={assets.basket_icon} alt="" />
+                    <Link to={'/cart'}><img src={assets.basket_icon} alt="" /></Link>
                     <div className="dot">
                         {/* <img src= alt="" /> */}
                     </div>
